@@ -1,0 +1,31 @@
+﻿<Page x:Class="Collage.src._pages.welcomePage_.PageRegistration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Collage.src._pages.welcomePage_"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Регестрация">
+
+    <Grid>
+        <StackPanel x:Name="mainStackPanel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" >
+            <Label FontFamily="Centry" Content="Регистрация" HorizontalContentAlignment="Center" Style="{DynamicResource MaterialDesignLabel}" FontSize="25" FontWeight="Bold" Foreground="Black"/>
+            <TextBox FontFamily="Centry" x:Name="tbFio" FontSize="20" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Введите ФИО" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Width="auto" Margin="0 0 0 10" Foreground="Black"/>
+            <TextBox FontFamily="Centry" x:Name="tbLogin" FontSize="20" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Введите логин" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Width="250" Margin="0 0 0 10" Foreground="Black"/>
+            <PasswordBox FontFamily="Centry" x:Name="tbPassword" FontSize="20" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Введите пароль" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" Width="250" Margin="0 0 0 10" Foreground="Black"/>
+            <PasswordBox FontFamily="Centry" x:Name="tbConfirmPassword" FontSize="20" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Подтвердите пароль" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" Width="250" Margin="0 0 0 10" Foreground="Black"/>
+            <TextBox FontFamily="Centry" x:Name="tbNickName" FontSize="20" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Введите NickName" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Width="250" Margin="0 0 0 10" Foreground="Black"/>
+            <TextBox FontFamily="Centry" x:Name="tbPhone" FontSize="20" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Введите номер телефона" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Width="250" Margin="0 0 0 10" PreviewTextInput="tbPhone_PreviewTextInput" Foreground="Black"/>
+            <ComboBox x:Name="cbItemDiscipline" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" materialDesign:HintAssist.Hint="Укажите предмет" Style="{DynamicResource MaterialDesignFloatingHintComboBox}" Margin="0 0 0 10" Width="250" SelectionChanged="cbItemDiscipline_SelectionChanged" Foreground="Black"/>
+
+            <Button FontFamily="Centry" x:Name="btRegister" Content="Зарегистрироваться" Click="btRegister_Click" Style="{DynamicResource MaterialDesignFlatMidBgButton}" Width="250" Foreground="Black"/>
+            <Label FontFamily="Centry" HorizontalContentAlignment="Center" Style="{DynamicResource MaterialDesignLabel}">
+                <Hyperlink x:Name="hlLogin" Click="hlLogin_Click">
+                    Авторизироваться
+                </Hyperlink>
+            </Label>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,129 @@
+﻿<Page x:Class="Collage.src._pages.welcomePage_.PageNavigation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Collage.src._pages.welcomePage_"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Главная страница">
+
+    <Grid>
+        <StackPanel x:Name="mainStackPanel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label FontFamily="Centry" Content="Корпоративная система - ОИК" HorizontalContentAlignment="Center" Style="{DynamicResource MaterialDesignLabel}" FontSize="20" FontWeight="Bold" Foreground="Black" Margin="0 0 0 15"/>
+
+            <Border BorderBrush="Black" BorderThickness="3" CornerRadius="5, 0, 0, 5" Background="Gray">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical">
+                        <Border Margin="5" BorderThickness="2" CornerRadius="5">
+                            <Image Source="/src/sourse/images/iconProfile.png" x:Name="iProfile" MouseDown="iProfile_MouseDown" Height="40">
+                                <Image.Style>
+                                    <Style TargetType="Image">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="ToolTip">
+                                                    <Setter.Value>
+                                                        <ToolTip Content="Личный кабинет" />
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                        </Border>
+                        <Border Margin="5" BorderThickness="2" CornerRadius="5">
+                            <Image Source="/src/sourse/images/tasker.png" x:Name="iTasker" MouseDown="iTasker_MouseDown" Height="40">
+                                <Image.Style>
+                                    <Style TargetType="Image">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="ToolTip">
+                                                    <Setter.Value>
+                                                        <ToolTip Content="Список задач" />
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                        </Border>
+                        <Border Margin="5" BorderThickness="2" CornerRadius="5">
+                            <Image Source="/src/sourse/images/messager.png" x:Name="iMsg" MouseDown="iMsg_MouseDown" Height="40">
+                                <Image.Style>
+                                    <Style TargetType="Image">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="ToolTip">
+                                                    <Setter.Value>
+                                                        <ToolTip Content="Мессенджер" />
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                        </Border>
+                        <Border Margin="5" BorderThickness="2" CornerRadius="5" Visibility="Hidden" x:Name="brProgram">
+                            <Image Source="/src/sourse/images/iconProgram.png" x:Name="iProgram" MouseDown="iProgram_MouseDown" Height="40">
+                                <Image.Style>
+                                    <Style TargetType="Image">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="ToolTip">
+                                                    <Setter.Value>
+                                                        <ToolTip Content="Расписание" />
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                        </Border>
+                        <Border Margin="5" BorderThickness="2" CornerRadius="5" Visibility="Hidden" x:Name="brAdmin">
+                            <Image Source="/src/sourse/images/Admin.png" x:Name="iAdmin" MouseDown="iAdmin_MouseDown" Height="40">
+                                <Image.Style>
+                                    <Style TargetType="Image">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="ToolTip">
+                                                    <Setter.Value>
+                                                        <ToolTip Content="Админ панель" />
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                        </Border>
+                        <Border Margin="5" BorderThickness="2" CornerRadius="5" VerticalAlignment="Bottom">
+                            <Image Source="/src/sourse/images/off.png" x:Name="ifOff" MouseDown="ifOff_MouseDown" Height="40">
+                                <Image.Style>
+                                    <Style TargetType="Image">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="ToolTip">
+                                                    <Setter.Value>
+                                                        <ToolTip Content="Закрыть программу" />
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                        </Border>
+                    </StackPanel>   
+                    <StackPanel Orientation="Vertical"  Background="#f5fbe8">
+                        <Frame x:Name="frNavigationFrame" NavigationUIVisibility="Hidden"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

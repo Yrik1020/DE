@@ -1,0 +1,28 @@
+﻿<Page x:Class="Collage.src._pages.adminPage_.PageAddEditTask"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Collage.src._pages.adminPage_"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Редактирование/Добавление задач">
+
+    <Grid>
+        <StackPanel x:Name="mainStackPanel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ComboBox x:Name="cbItemTsk"  DisplayMemberPath="UserF" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Укажите пользователя" Style="{DynamicResource MaterialDesignFloatingHintComboBox}" Margin="0 0 0 10" Width="auto"/>
+
+            <TextBox FontFamily="Centry" Text="{Binding task, Mode=TwoWay}" x:Name="tbFirmName" FontSize="20" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Введите задачу" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Width="250" Margin="0 0 0 10"/>
+            <TextBox FontFamily="Centry" Text="{Binding description, Mode=TwoWay}" x:Name="tbAdress" FontSize="20" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="описание задачи" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" Width="250" Margin="0 0 0 10"/>
+
+            <DatePicker FontFamily="Centry"  x:Name="dpDate" FontSize="20" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Выбирите дату" Style="{DynamicResource MaterialDesignDatePicker}" Width="250" Margin="0 0 0 10"/>
+            <Button FontFamily="Centry" x:Name="btSave" Content="Сохранить" Click="btSave_Click" Style="{DynamicResource MaterialDesignFlatButton}" Width="250"/>
+            <Label FontFamily="Centry" HorizontalContentAlignment="Center" Style="{DynamicResource MaterialDesignLabel}">
+                <Hyperlink x:Name="hlExit" Click="hlExit_Click">
+                    Выйти
+                </Hyperlink>
+            </Label>
+        </StackPanel>
+    </Grid>
+</Page>
